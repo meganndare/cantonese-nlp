@@ -16,6 +16,7 @@ def learn_embeddings():
 
     # format requirement: first line [vocabulary_size embedding_dimension]
     # word and each entry in embedding are split using whitespace (not \t)
+
     with open(args.write_path, 'w') as f:
         f.write(str(len(model.words)))
         f.write(' ')
@@ -33,5 +34,10 @@ def learn_embeddings():
     sys.stdout.write("Embedding trained and saved.\n")
 
 
+
+
 if __name__ == "__main__":
      learn_embeddings()
+
+
+
