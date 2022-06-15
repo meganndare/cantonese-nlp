@@ -69,7 +69,7 @@ df_nownewshk = df_from_imginn(data, retain_comments = True)
 
 
 # obtain all relevant links with the feature 'youtube.com' in the domain
-domain = "https://sites.google.com/view/lihkg-kongjisubtitles/drama/current-airing/Theory-of-Love?authuser=0"
+domain = "https://sites.google.com/view/lihkg-kongjisubtitles/drama?authuser=0"
 kjs_links = crawl_website_links(domain_url = domain, feature = 'youtube.com', domain_name = "https://sites.google.com/", exclude_feature = "#h")
 
 
