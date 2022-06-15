@@ -19,6 +19,7 @@ def get_soup(url):
     :param str url: a url from which the source code is to be obtained
     :return: the source code of the url
     :rtype: bs4.BeautifulSoup"""
+    
     try:
         response = requests.get(url)
     except:
@@ -114,6 +115,7 @@ def crawl_imginn(ig_account_name, title_regex= None, max_n_page = None, from_las
     :type from_last_url: str or None
     :return: a tuple with the first element a dictionary containing index, url, (title), content and comments of the instagram account, the second element of the next url to be crawled (if there is no next url, it will return an int 0)
     :rtype: tuple(dict, str or int)"""
+    
     data = {}
     ind = 0
     if from_last_url == None:
@@ -218,10 +220,12 @@ def get_youtube_transcript(url):
     # ...
     ]
     Note: Youtube sometimes blocks this module due to too many requests (code: 429), we may need to use a VPN to continue
+    
     :param str url: a link to a youtube video which contains at least cantonese subtitles
     :return: a tuple of two lists, the former being the cantonese transcript and latter the mandarin transcript. 
              Returns empty list(s) if mandarin and/or cantonese subtitles do not exist. 
     :rtype: tuple(list, list)"""
+    
     try:
         video_id = re.search("(?<=embed\/).+", url).group(0)
     except:
@@ -259,6 +263,7 @@ def df_from_dict(data, save_csv = False, csv_file_path= None):
     :type csv_file_path: str or None
     :return: data in df format
     :rtype: pandas.core.frame.DataFrame"""
+    
     df = pd.DataFrame.from_dict(data, orient='index')
     df = df.reset_index(drop=False)
     df = df.rename(columns={"index": "id", "content": "text"})
@@ -279,6 +284,7 @@ def df_from_subtitles(list_of_videos, parallel = False, save_csv = False, csv_fi
     :type csv_file_path: str or None
     :return: data in df format
     :rtype: pandas.core.frame.DataFrame"""
+    
     df = pd.DataFrame()
     for vid in list_of_videos:
         c, m = get_youtube_transcript(vid)
@@ -312,6 +318,7 @@ def df_from_imginn(data, retain_comments = False, save_csv = False, csv_file_pat
     :type csv_file_path: str or None
     :return: data in df format
     :rtype: pandas.core.frame.DataFrame"""
+    
     df = pd.DataFrame.from_dict(data, orient = 'index')
     if retain_comments == True:
         df = df.explode('comments')
