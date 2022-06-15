@@ -30,7 +30,6 @@ def get_soup(url):
         while tries < 5 and re.match("(?!200)\d{3}", str(response.status_code)):
             tries += 1
             response = requests.get(url)
-            #print("tries",tries, ": unable to request this page:",url, ". status code: ", response.status_code)
         if re.match("(?!200)\d{3}", str(response.status_code)):
             print(url, ": request unsuccessful after 5 attempts.")
             return None
@@ -62,11 +61,10 @@ def crawl_website_links(domain_url, feature, link_set = None, target_link_set = 
         link_set = set()
         target_link_set = set()
     link_set.add(url)
-    #print(url)
     if len(link_set) % 20 == 0:
         print('currently went through', len(link_set), 'links.')
     soup = get_soup(url)
-    # ignore if the soup is empty or it contains no link (href)
+
     if soup != None:
         for line in set(soup.select('[src]')).union(set(soup.select('[href]'))):
             try:
@@ -93,7 +91,7 @@ def crawl_website_links(domain_url, feature, link_set = None, target_link_set = 
                     # report progress
                     if len(target_link_set) % 20 == 0:
                         print('currently', len(target_link_set), 'links collected.')
-                # discontinue the loop if the link does not belong to the current domain
+                # skip if the link does not belong to the current domain
                 elif re.search("^%s"%domain_name, link) == None:
                     continue
                 else:
@@ -150,8 +148,9 @@ def crawl_imginn(ig_account_name, title_regex= None, max_n_page = None, from_las
             data[ind] = {}
             data[ind]['url'] = doc_link
 
-            #this retrieves the text content of the post
+            # retrieve the text content of the post
             article = soup.find("div", class_='desc').get_text()
+            
             # retrieve title if they're marked by a certain format (in terms of regex)
             if title_regex != None: 
                 if re.search("(%s)"%title_regex, article):
@@ -162,7 +161,7 @@ def crawl_imginn(ig_account_name, title_regex= None, max_n_page = None, from_las
     
             data[ind]['text'] = article
 
-            #retrieve the comments under the post
+            # retrieve the comments under the post
             comments = soup.find("div", class_="comments").find_all("div", class_="text")
             data[ind]['comments'] = [comment.get_text() for comment in comments]
 
