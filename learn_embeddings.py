@@ -56,7 +56,6 @@ def learn_embeddings(parser=None):
                 f.write(str(entry))
                 f.write(' ')
             f.write('\n')
-    sys.stdout.write("Embedding trained and saved.\n")
 
     shared_model = fasttext.train_unsupervised(args.shared_input, dim=args.embedding_dim, model=args.model)
 
@@ -76,6 +75,8 @@ def learn_embeddings(parser=None):
                 f.write(str(entry))
                 f.write(' ')
             f.write('\n')
+            
+    sys.stdout.write("Embedding trained and saved.\n")
 
 
 if __name__ == "__main__":
