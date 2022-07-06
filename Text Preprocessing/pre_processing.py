@@ -24,13 +24,7 @@ class text_preprocessor():
             c_text = [item for item in c_text if pd.isnull(item) == False]
             c_text = self.foreign_text_filter(c_text)
             c_text = [pycantonese.segment(i) for i in c_text]
-
-#            m_text = [self.clean_sent(i) for i in m_text]
-#            m_text = [item for item in m_text if pd.isnull(item) == False]
-#            m_text = [jieba.lcut(i) for i in m_text]
-
             c_texts.append(c_text)
-#            m_texts.append(m_text)
         return c_texts
 
     def pre_process_wiki(self,text,language):
@@ -200,6 +194,24 @@ class file_opener():
                 names.append(name)
         self.wiki_texts = texts
         self.wiki_names = names
+
+    def open_youtube(self,path):
+        """
+        :param path: the folder that contains files
+        :return texts: the list of text of files, names: the list of file names
+        """
+        texts = list()
+        names = list()
+        for root, dirs, files in os.walk(path, topdown=False):
+            for name in files:
+                f_path = os.path.join(root, name)
+                f = open(f_path,encoding = "utf-8")
+                t =f.read()
+                texts.append(re.findall(r"text\'\:\ \'(.*?)\'\,\ \'start\'",t))
+                names.append(name)
+        self.youtube_texts = texts
+        self.youtube_names = names
+
         
 
 
