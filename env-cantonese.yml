@@ -15,4 +15,3 @@ dependencies:
         - youtube_transcript_api
         - tqdm
         - fasttext
-        - pickle
