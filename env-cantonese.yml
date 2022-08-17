@@ -15,3 +15,4 @@ dependencies:
         - youtube_transcript_api
         - tqdm
         - fasttext
+        - subword-nmt
