@@ -17,4 +17,3 @@ dependencies:
         - fasttext
         - subword-nmt
         - SciPy
-        - CuPy
