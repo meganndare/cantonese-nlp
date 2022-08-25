@@ -110,3 +110,12 @@ def BLEU(candidate, references):
         precisions.append(pr)
     bleu = geometric_mean(precisions) * bp
     return bleu
+
+
+if __name__ == "__main__":
+    candidate, references = fetch_data(sys.argv[1], sys.argv[2])
+    bleu = BLEU(candidate, references)
+    print(bleu)
+    out = open('bleu_out.txt', 'w')
+    out.write(str(bleu))
+    out.close()
