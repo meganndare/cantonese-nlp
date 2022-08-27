@@ -131,7 +131,7 @@ def BLEU(candidate, references):
     bleu = geometric_mean(precisions) * bp
     return bleu
 
-if __name__=="main":
+if __name__=="__main__":
     
     parser = argparse.ArgumentParser(description='I am too lazy to add a description here. You wrote the code. You know what\'s it for')
     parser.add_argument('--path', help='path of machine translation file')
