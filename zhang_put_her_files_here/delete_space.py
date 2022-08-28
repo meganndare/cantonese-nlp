@@ -1,7 +1,7 @@
 import argparse
 def delete_space(in_f,ou_f):
-    f = open(in_f,encoding = "utf-8")
-    sen = f.read().split("\n")
+    f = open(in_f,encoding = "utf-8").read()
+    sen = f.split("\n")
     output_lines = list()
     for line in sen:
         newline = line.replace(" ","")
