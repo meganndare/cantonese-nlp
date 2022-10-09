@@ -22,7 +22,7 @@ I used this [Github repository](https://github.com/rsennrich/subword-nmt) for BP
 |subtitles|kongjisubtitles|77479|YES|
 ||youtube subtitles|1620|NO|
 
-For data extracted from Instagram (all monolingual)
+For data extracted from Instagram (all monolingual) via imginn.org: 
 | Domain  | Source | Number of lines | Number of comments|
 | --------| ------ | --------------- |-------------------|
 |instagram non-news|afcdgovhk|698|255|
