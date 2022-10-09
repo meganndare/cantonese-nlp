@@ -1,0 +1,18 @@
+Documentation Pre-processing
+==============================
+Pre-processing Cantonese data scraped from social media
+1. Cut each text into sentences. The cutting points are punctuations such as .!? that defines the end of a sentence.
+2. Cantonese data craped from social media is invetitablely mingled with Mandarin data. Once the sentence is cutted, it is fed into a filter that detect whether a sentence is in Cantonese or Mandarin. Mandarin sentence are eliminated.
+3. Cantonese sentences are cleaned. url, emoji and hashtags are removed. We did not remove any @, considering that it is always followed by an account name that is part of the sentence.
+4. Sometimes Cantonese and English can be present in the same sentence (e.g., 只不過係一件貌似tiramisu 嘅蛋糕仔).  If len(chinese_characters)<=len(sentence)*0.05, the sentence is deleted.
+5. Sentences are tokenized using segment() function from Pycantonese python library.
+
+Pre-processing Cantonese data scraped from Wikipedia
+1. Cut each text into sentences. The cutting points are punctuations such as .!? that defines the end of a sentence.
+2. Cutted sentences are fed into foreign text filter.  If len(chinese_characters)<=len(sentence)*0.05, the sentence is deleted
+3. Sentences are tokenized using segment() function from Pycantonese python library.
+
+Pre-processing Mandarin data scraped from Wikipedia
+1. Cut each text into sentences. The cutting points are punctuations such as .!? that defines the end of a sentence.
+2. Cutted sentences are fed into foreign text filter.  If len(chinese_characters)<=len(sentence)*0.05, the sentence is deleted
+3. Sentences are tokenized using lcut() function from jieba python library.
