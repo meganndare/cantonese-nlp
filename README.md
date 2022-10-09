@@ -9,7 +9,7 @@ To map embeddings to a shared space, apply https://github.com/artetxem/vecmap to
 I used this [Github repository](https://github.com/rsennrich/subword-nmt) for BPE
 
 # Cantonese data 
-
+We collected 910k monolingual Cantonese data, in addition to some parallel datasets. 
 | Domain  | Source | Number of lines | Parallel|
 | --------| ------ | --------------- |---------|
 | wikipedia|Wikipedia|689234|NO|
