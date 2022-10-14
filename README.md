@@ -1,14 +1,30 @@
 # cantonese-nlp
 cantonese-mandarin unsupervised neural translation for sw project
 
-# REMEMBER TO "git pull" BEFORE "git push" PLZ
 
+# Running your own model
+
+#### 1. RNN and Transformer Models leveraged the following repositories. For a step-by-step pipeline for running the RNN model in your own environment, see [this google doc](https://docs.google.com/document/d/1hlBGubStfdLhES_RppezuPCXex6Z98QuzQwxIzIjm7Q/edit).
+
+##### RNN
+https://github.com/artetxem/undreamt
+
+##### Transformer
+https://github.com/facebookresearch/UnsupervisedMT
+
+
+#### 2. Note that there are several components required to train a model for unsupervised machine translation, as detailed in our paper. Below are some components we used for various models, such as a BPE vocabulary generator and repository for training cross-lingual embeddings. Depending on which model configuartion you would like to run, they may be useful:
+
+##### Vecmap for mapping-based cross-lingual embeddings
 To map embeddings to a shared space, apply https://github.com/artetxem/vecmap to the seperately learned embeddings
 
-# BPE
-I used this [Github repository](https://github.com/rsennrich/subword-nmt) for BPE
+##### BPE
+This [Github repository](https://github.com/rsennrich/subword-nmt) was used for generating BPE vocabulary.
 
-# Cantonese data 
+
+
+# Information about the Cantonese Dataset 
+
 We collected 910k monolingual Cantonese data, in addition to some parallel datasets. 
 | Domain  | Source | Number of lines | Parallel|
 | --------| ------ | --------------- |---------|
