@@ -56,13 +56,18 @@ For data extracted from Instagram (all monolingual) via imginn.org:
 ||nownewshk|369|40|
 ||onepao.hk|1719|33|
 
+
 # Data and Pre-trained model:
 
-Cantonese/Mandarin corpora: https://drive.google.com/drive/folders/13tWHQkv3MOxVZnz8bMhDOfl6OPSBI6rn?usp=sharing (train: monolingual, dev/test parallel)
+##### Cantonese/Mandarin corpora: (train: monolingual, dev/test parallel)
+https://drive.google.com/drive/folders/13tWHQkv3MOxVZnz8bMhDOfl6OPSBI6rn?usp=sharing 
 
-Binarized training data: https://drive.google.com/drive/folders/1KCvj5UQmaLW7YgkLJQ-KCVoFTWMO7im6?usp=sharing
+##### Binarized training data: 
+https://drive.google.com/drive/folders/1KCvj5UQmaLW7YgkLJQ-KCVoFTWMO7im6?usp=sharing
 
-Pre-trained model: https://drive.google.com/drive/folders/1XUOht0kdUJPf3byd_5ODLyAhPEEAvvep?usp=sharing
+##### Pre-trained model: 
+https://drive.google.com/drive/folders/1XUOht0kdUJPf3byd_5ODLyAhPEEAvvep?usp=sharing
+
 
 To obtain the pretrained model, run:
 
