@@ -25,7 +25,7 @@ This [Github repository](https://github.com/rsennrich/subword-nmt) was used for 
 
 # Information about the Cantonese Dataset 
 
-We collected 910k monolingual Cantonese data, in addition to some parallel datasets. 
+We collected 910k monolingual Cantonese data, in addition to some parallel datasets. The scraping script can be found in `crawl.py` and an example can be found in `crawling_demo.py`. 
 | Domain  | Source | Number of lines | Parallel|
 | --------| ------ | --------------- |---------|
 | wikipedia|Wikipedia|689234|NO|
