@@ -26,6 +26,11 @@ This [Github repository](https://github.com/rsennrich/subword-nmt) was used for 
 # Information about the Cantonese Dataset 
 
 We collected 910k monolingual Cantonese data, in addition to some parallel datasets. The scraping script can be found in `crawl.py` and an example can be found in `crawling_demo.py`. 
+
+Monolingual data is used in the train set, parallel data is used in the dev & test sets.
+
+The complete dataset (Cantonese & Mandarin) can be found [here](https://drive.google.com/drive/folders/13tWHQkv3MOxVZnz8bMhDOfl6OPSBI6rn?usp=sharing) and [the binarized version here](https://drive.google.com/drive/folders/1KCvj5UQmaLW7YgkLJQ-KCVoFTWMO7im6?usp=sharing).
+
 | Domain  | Source | Number of lines | Parallel|
 | --------| ------ | --------------- |---------|
 | wikipedia|Wikipedia|689234|NO|
@@ -57,14 +62,7 @@ For data extracted from Instagram (all monolingual) via imginn.org:
 ||onepao.hk|1719|33|
 
 
-# Data and Pre-trained model:
-
-##### Cantonese/Mandarin corpora: (train: monolingual, dev/test parallel)
-https://drive.google.com/drive/folders/13tWHQkv3MOxVZnz8bMhDOfl6OPSBI6rn?usp=sharing 
-
-##### Binarized training data: 
-https://drive.google.com/drive/folders/1KCvj5UQmaLW7YgkLJQ-KCVoFTWMO7im6?usp=sharing
-
+# Pre-trained model:
 ##### Pre-trained model: 
 https://drive.google.com/drive/folders/1XUOht0kdUJPf3byd_5ODLyAhPEEAvvep?usp=sharing
 
