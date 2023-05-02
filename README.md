@@ -31,7 +31,7 @@ We collected 910k monolingual Cantonese data, in addition to some parallel datas
 
 Monolingual data is used in the train set, parallel data is used in the dev & test sets.
 
-The complete dataset (Cantonese & Mandarin) can be found [here](https://drive.google.com/drive/folders/13tWHQkv3MOxVZnz8bMhDOfl6OPSBI6rn?usp=sharing) and [the binarized version here](https://drive.google.com/drive/folders/1KCvj5UQmaLW7YgkLJQ-KCVoFTWMO7im6?usp=sharing).
+The complete raw dataset (Cantonese & Mandarin) can be found [here](https://drive.google.com/drive/folders/1NdO299X4YGoKdQDrS4wLgYrdCBar3Usp).
 
 Domains include: wikipedia, articles, corpus, dictionary, reviews, movie / tv subtitles, youtube subtitles, instagram
 
